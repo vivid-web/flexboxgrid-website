@@ -8,11 +8,19 @@
   },
   "homepage": "https://flexboxgrid.vivid-websolutions.nl",
   "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-jade": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylus": "^2.5.0"
+    "gulp-stylus": "^2.5.0",
+    "gulp-uglify": "^2.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "universal-analytics": "^0.4.2"
   }
 }
