@@ -36,7 +36,8 @@ html
         meta(name='msapplication-TileImage', content='/metadata/mstile-144x144.png')
         meta(name='msapplication-config', content='/metadata/browserconfig.xml')
         meta(name='theme-color', content='#ffaa00')
-        link(rel='stylesheet', type='text/css', href='/css/app.css')
+        style
+            include ../../public/css/app.css
     body
         include includes/header
         include includes/invidual-sizing
