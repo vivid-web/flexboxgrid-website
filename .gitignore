@@ -1,3 +1,7 @@
-/public
+/public/css
+/public/fonts
+/public/js
+/public/metadata
+/public/index.html
 /src/vendor
 /node_modules

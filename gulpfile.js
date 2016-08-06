@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var del = require('del');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
@@ -37,20 +38,11 @@ var directories = {
         input: './src/metadata/**',
         output: './public/metadata/',
     },
-    rootFiles: {
-        input: [
-            './src/robots.txt',
-            './src/sitemap.xml',
-            './src/web.config',
-            './src/googlefec974c4fcd4ea72.html',
-        ],
-        output: './public/',
-    },
 };
 
 gulp.task('js', () => {
     var bundler = browserify(directories.js.input)
-        .transform(babelify, {/* options */ });
+        .transform(babelify, { /* options */ });
 
     return bundler.bundle()
         .pipe(source('app.js'))
@@ -98,14 +90,6 @@ gulp.task('metadata', () => {
         ));
 });
 
-gulp.task('root-files', () => {
-    return gulp
-        .src(directories.rootFiles.input)
-        .pipe(gulp.dest(
-            directories.rootFiles.output
-        ));
-});
-
-gulp.task('build', ['js', 'css', 'html', 'fonts', 'metadata', 'root-files']);
+gulp.task('build', ['js', 'css', 'html', 'fonts', 'metadata']);
 
 gulp.task('default', ['build']);
