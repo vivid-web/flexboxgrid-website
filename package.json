@@ -1,0 +1,18 @@
+{
+  "name": "flexbox-grid-website",
+  "description": "The main website for flexbox grid",
+  "author": "Vivid Websolutions <info@vivid-websolutions.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivid-web/flexbox-grid-website/issues"
+  },
+  "homepage": "https://flexboxgrid.vivid-websolutions.nl",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.5.0"
+  }
+}
