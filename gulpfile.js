@@ -13,29 +13,29 @@ var jade = require('gulp-jade');
 var directories = {
     js: {
         input: './src/js/app.js',
-        output: './dist/js'
+        output: './public/js'
     },
     stylus: {
         input: './src/stylus/app.styl',
         output: {
-            folder: './dist/css',
+            folder: './public/css',
             fileName: 'app.css',
         },
     },
     jade: {
         input: './src/jade/index.jade',
         output: {
-            folder: './dist',
+            folder: './public',
             fileName: 'index.html',
         },
     },
     fonts: {
         input: './src/fonts/**',
-        output: './dist/fonts/',
+        output: './public/fonts/',
     },
     metadata: {
         input: './src/metadata/**',
-        output: './dist/metadata/',
+        output: './public/metadata/',
     },
     rootFiles: {
         input: [
@@ -44,7 +44,7 @@ var directories = {
             './src/web.config',
             './src/googlefec974c4fcd4ea72.html',
         ],
-        output: './dist/',
+        output: './public/',
     },
 };
 
