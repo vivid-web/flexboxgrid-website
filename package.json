@@ -9,8 +9,9 @@
   "dependencies": {
     "flexbox-grid-stylus": "^3.2.2",
     "normalize.css": "^8.0.0",
-    "register-service-worker": "^1.0.0",
-    "universal-analytics": "^0.4.2",
+    "raw-loader": "^0.5.1",
+    "register-service-worker": "^1.1.1",
+    "universal-analytics": "^0.4.16",
     "vue": "^2.5.16"
   },
   "devDependencies": {

@@ -15,6 +15,7 @@ import Vue from 'vue';
  */
 
 import './plugins/universal-analytics';
+import './plugins/register-service-worker';
 
 /* ============
  * Styling
