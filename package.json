@@ -1,26 +1,62 @@
 {
   "name": "flexbox-grid-website",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "flexbox-grid-stylus": "^3.2.2",
+    "normalize.css": "^8.0.0",
+    "register-service-worker": "^1.0.0",
+    "universal-analytics": "^0.4.2",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.6",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.6",
+    "@vue/cli-plugin-pwa": "^3.0.0-beta.6",
+    "@vue/cli-service": "^3.0.0-beta.6",
+    "@vue/eslint-config-airbnb": "^3.0.0-beta.6",
+    "@vue/test-utils": "^1.0.0-beta.12",
+    "lint-staged": "^7.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivid-web/flexbox-grid-website.git"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
   "description": "The main website for flexbox grid",
   "author": "Vivid Websolutions <info@vivid-websolutions.nl>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vivid-web/flexbox-grid-website/issues"
   },
-  "homepage": "https://flexboxgrid.vivid-websolutions.nl",
-  "devDependencies": {
-    "babelify": "^7.3.0",
-    "browserify": "^13.1.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylus": "^2.5.0",
-    "gulp-uglify": "^2.0.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   },
-  "dependencies": {
-    "universal-analytics": "^0.4.2"
-  }
+  "keywords": [
+    "flexbox",
+    "grid",
+    "website"
+  ],
+  "homepage": "https://flexboxgrid.vivid-websolutions.nl"
 }

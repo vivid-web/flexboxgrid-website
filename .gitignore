@@ -1,7 +1,5 @@
-/public/css
-/public/fonts
-/public/js
-/public/metadata
-/public/index.html
+/dist
 /src/vendor
 /node_modules
+.env
+yarn-error.log
