@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "flexbox-grid-stylus": "^3.2.2",
-    "universal-analytics": "^0.4.2"
+    "normalize.css": "^8.0.0",
+    "register-service-worker": "^1.0.0",
+    "universal-analytics": "^0.4.2",
+    "vue": "^2.5.16"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.6",
@@ -31,7 +34,9 @@
     "type": "git",
     "url": "git+https://github.com/vivid-web/flexbox-grid-website.git"
   },
-  "homepage": "https://flexboxgrid.vivid-websolutions.nl",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
   "description": "The main website for flexbox grid",
   "author": "Vivid Websolutions <info@vivid-websolutions.nl>",
   "license": "MIT",
@@ -53,7 +58,5 @@
     "grid",
     "website"
   ],
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  }
+  "homepage": "https://flexboxgrid.vivid-websolutions.nl"
 }
