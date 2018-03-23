@@ -31,9 +31,7 @@
     "type": "git",
     "url": "git+https://github.com/vivid-web/flexbox-grid-website.git"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
+  "homepage": "https://flexboxgrid.vivid-websolutions.nl",
   "description": "The main website for flexbox grid",
   "author": "Vivid Websolutions <info@vivid-websolutions.nl>",
   "license": "MIT",
@@ -55,5 +53,7 @@
     "grid",
     "website"
   ],
-  "homepage": "https://flexboxgrid.vivid-websolutions.nl"
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  }
 }
