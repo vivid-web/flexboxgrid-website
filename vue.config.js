@@ -1,43 +1,31 @@
 module.exports = {
-  baseUrl: '/',
-
-  outputDir: 'dist',
-
+  /**
+   * If the project should be lint on save.
+   */
   lintOnSave: true,
 
-  compiler: false,
+  /**
+   * If the production source map should be enabled.
+   */
+  productionSourceMap: false,
 
-  chainWebpack: () => {},
-  configureWebpack: () => {},
+  /**
+   * Progressive Web App configuration.
+   */
+  pwa: {
+    /**
+     * The name of the app.
+     */
+    name: 'Flexbox Grid Documentation',
 
-  vueLoader: {},
+    /**
+     * The color of the theme.
+     */
+    themeColor: '#ffaa00',
 
-  productionSourceMap: true,
-
-  css: {
-    extract: true,
-
-    sourceMap: true,
-
-    loaderOptions: {},
-
-    modules: false,
-  },
-
-  dll: false,
-
-  pwa: {},
-
-  devServer: {
-    open: process.platform === 'darwin',
-    host: '0.0.0.0',
-    port: 8080,
-    https: false,
-    hotOnly: false,
-    proxy: null,
-  },
-
-  pluginOptions: {
-    // ...
+    /**
+     * The color of the Microsoft Windows tile
+     */
+    msTileColor: '#ffaa00',
   },
 };
