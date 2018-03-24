@@ -19,6 +19,7 @@
               :variants="['primary', 'block']"
               href="https://raw.githubusercontent.com/vivid-web/flexbox-grid-stylus/master/dist/flexbox-grid.css"
               target="_blank"
+              rel="noopener"
             >
               Download Full
             </UIButton>
@@ -28,6 +29,7 @@
               :variants="['primary', 'block']"
               href="https://raw.githubusercontent.com/vivid-web/flexbox-grid-stylus/master/dist/flexbox-grid.min.css"
               target="_blank"
+              rel="noopener"
             >
               Download Minified
             </UIButton>
@@ -67,6 +69,7 @@
                         variant="primary"
                         href="http://github.com/vivid-web/flexbox-grid-sass"
                         target="_blank"
+                        rel="noopener"
                       >
                         GitHub
                       </UIButton>
@@ -107,6 +110,7 @@
                         variant="primary"
                         href="http://github.com/vivid-web/flexbox-grid-less"
                         target="_blank"
+                        rel="noopener"
                       >
                         GitHub
                       </UIButton>
@@ -146,6 +150,7 @@
                         variant="primary"
                         href="http://github.com/vivid-web/flexbox-grid-stylus"
                         target="_blank"
+                        rel="noopener"
                       >
                         GitHub
                       </UIButton>

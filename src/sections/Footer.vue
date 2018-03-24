@@ -6,6 +6,7 @@
           href="http://vivid-websolutions.nl"
           target="_blank"
           variant="light"
+          rel="noopener"
         >
           Vivid Websolutions
         </UILink>
