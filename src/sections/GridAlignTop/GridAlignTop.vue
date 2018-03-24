@@ -6,7 +6,7 @@
     :code-example="codeExample"
   >
     <div class="grid grid--container">
-      <div class="row row--sm-center">
+      <div class="row row--sm-top">
         <div class="col col--sm-4">
           <UIBlock :variant="theme">
             <UIBlockContent :variant="theme">
