@@ -3,11 +3,29 @@
 
 The website for the documentation for Flexbox Grid.
 
-[flexboxgrid.vivid-websolutions.nl](http://flexboxgrid.vivid-websolutions.nl)
+## Live version
+For the live version, checkout [flexboxgrid.vivid-websolutions.nl](http://flexboxgrid.vivid-websolutions.nl)
 
+## Developing
+To get up and running run:
+``` bash
+$ npm install
+$ npm run serve
+```
+
+## Configuration
+Copy the `.env.example` to `.env` and fill in the environment variables
+
+## Production build
+To build the application, run:
+```bash
+$ npm run build
+```
+
+## License
 The MIT License (MIT)
 
-Copyright (c) 2016 Vivid Websolutions
+Copyright (c) 2016 - 2018 Vivid Websolutions
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
