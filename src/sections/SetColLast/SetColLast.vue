@@ -1,28 +1,3 @@
-<template>
-  <SectionLayout
-    :theme="theme"
-    :title="title"
-    :subtitle="subtitle"
-    :code-example="codeExample"
-  >
-    <div class="grid grid--container">
-      <div class="row">
-        <div
-          v-for="(index) in numberOfColumns"
-          :key="index"
-          :class="columnClassNames(index)"
-          class="col col--sm-2"
-        >
-          <UIBlock :variant="theme">
-            <UIBlockContent :variants="[theme, 'center']">
-              {{ index }}
-            </UIBlockContent>
-          </UIBlock>
-        </div>
-      </div>
-    </div>
-  </SectionLayout>
-</template>
 <script>
 import SectionLayout from '@/sections/_Layout/Layout.vue';
 import UIBlock from '@/components/Block/Block.vue';
@@ -83,3 +58,29 @@ export default {
   },
 };
 </script>
+
+<template>
+  <SectionLayout
+    :theme="theme"
+    :title="title"
+    :subtitle="subtitle"
+    :code-example="codeExample"
+  >
+    <div class="grid grid--container">
+      <div class="row">
+        <div
+          v-for="(index) in numberOfColumns"
+          :key="index"
+          :class="columnClassNames(index)"
+          class="col col--sm-2"
+        >
+          <UIBlock :variant="theme">
+            <UIBlockContent :variants="[theme, 'center']">
+              {{ index }}
+            </UIBlockContent>
+          </UIBlock>
+        </div>
+      </div>
+    </div>
+  </SectionLayout>
+</template>

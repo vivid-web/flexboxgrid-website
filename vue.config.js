@@ -9,6 +9,8 @@ module.exports = {
    */
   productionSourceMap: false,
 
+  assetsDir: 'src/assets',
+
   /**
    * Progressive Web App configuration.
    */

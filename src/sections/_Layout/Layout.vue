@@ -1,32 +1,3 @@
-<template>
-  <UISection :variant="theme">
-    <UISectionHeader :variant="theme">
-      <div class="grid grid--container">
-        <div class="row">
-          <div class="col col--md-12">
-            <UISectionTitle :variant="theme">
-              {{ title }}
-            </UISectionTitle>
-            <UISectionUnderline :variant="theme" />
-            <UISectionSubtitle :variant="theme">
-              {{ subtitle }}
-            </UISectionSubtitle>
-          </div>
-        </div>
-      </div>
-    </UISectionHeader>
-    <UISectionBody :variant="theme">
-      <slot />
-      <div class="grid grid--container">
-        <div class="row">
-          <div class="col">
-            <UICode :variant="theme">{{ codeExample }}</UICode>
-          </div>
-        </div>
-      </div>
-    </UISectionBody>
-  </UISection>
-</template>
 <script>
 import UIBlock from '@/components/Block/Block.vue';
 import UIBlockContent from '@/components/Block/BlockContent.vue';
@@ -102,3 +73,37 @@ export default {
   },
 };
 </script>
+
+<template>
+  <UISection :variant="theme">
+    <UISectionHeader :variant="theme">
+      <div class="grid grid--container">
+        <div class="row">
+          <div class="col col--md-12">
+            <UISectionTitle :variant="theme">
+              {{ title }}
+            </UISectionTitle>
+            <UISectionUnderline :variant="theme" />
+            <UISectionSubtitle :variant="theme">
+              {{ subtitle }}
+            </UISectionSubtitle>
+          </div>
+        </div>
+      </div>
+    </UISectionHeader>
+    <UISectionBody :variant="theme">
+      <slot />
+      <div class="grid grid--container">
+        <div class="row">
+          <div class="col">
+            <UICode
+              :variant="theme"
+              :content="codeExample"
+              language="html"
+            />
+          </div>
+        </div>
+      </div>
+    </UISectionBody>
+  </UISection>
+</template>

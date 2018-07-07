@@ -1,3 +1,41 @@
+<script>
+import SectionLayout from '@/sections/_Layout/Layout.vue';
+import UIBlock from '@/components/Block/Block.vue';
+import UIBlockContent from '@/components/Block/BlockContent.vue';
+
+import codeExample from 'raw-loader!./code-example.html';
+
+export default {
+  /**
+   * The name of the section.
+   */
+  name: 'SectionGridAlignCenter',
+
+  /**
+   * The components that this section can use.
+   */
+  components: {
+    SectionLayout,
+    UIBlock,
+    UIBlockContent,
+  },
+
+  /**
+   * The data that this section can use.
+   *
+   * @returns {Object} The view-model.
+   */
+  data() {
+    return {
+      theme: 'light',
+      title: 'Center Alignment',
+      subtitle: 'It is possible to align the columns at the center',
+      codeExample,
+    };
+  },
+};
+</script>
+
 <template>
   <SectionLayout
     :theme="theme"
@@ -68,40 +106,3 @@
     </div>
   </SectionLayout>
 </template>
-<script>
-import SectionLayout from '@/sections/_Layout/Layout.vue';
-import UIBlock from '@/components/Block/Block.vue';
-import UIBlockContent from '@/components/Block/BlockContent.vue';
-
-import codeExample from 'raw-loader!./code-example.html';
-
-export default {
-  /**
-   * The name of the section.
-   */
-  name: 'SectionGridAlignCenter',
-
-  /**
-   * The components that this section can use.
-   */
-  components: {
-    SectionLayout,
-    UIBlock,
-    UIBlockContent,
-  },
-
-  /**
-   * The data that this section can use.
-   *
-   * @returns {Object} The view-model.
-   */
-  data() {
-    return {
-      theme: 'light',
-      title: 'Center Alignment',
-      subtitle: 'It is possible to align the columns at the center',
-      codeExample,
-    };
-  },
-};
-</script>

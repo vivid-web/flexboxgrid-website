@@ -1,9 +1,5 @@
-<template>
-  <div :class="classNames">
-    <slot/>
-  </div>
-</template>
 <script>
+import ComponentMixin from '@/mixins/component';
 import ElementMixin from '@/mixins/element';
 
 export default {
@@ -22,7 +18,16 @@ export default {
    * The mixins being injected into this component.
    */
   mixins: [
+    ComponentMixin,
     ElementMixin,
   ],
 };
 </script>
+
+<template>
+  <div :class="classNames">
+    <slot>
+      {{ content }}
+    </slot>
+  </div>
+</template>

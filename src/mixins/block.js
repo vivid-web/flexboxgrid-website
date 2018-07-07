@@ -1,4 +1,3 @@
-import CSSUtil from '@/utils/css';
 import StyleMixin from '@/mixins/style';
 
 export default {
@@ -21,10 +20,10 @@ export default {
     /**
      * Computed the correct class names.
      *
-     * @returns {Array} The correct CSS class names.
+     * @returns {String[]} The correct CSS class names.
      */
     classNames() {
-      return CSSUtil
+      return this.$css
         .getBlockClassNames(this.$options.block, this.getVariants)
         .map(className => this.getClassName(className));
     },

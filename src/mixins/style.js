@@ -31,7 +31,7 @@ export default {
     /**
      * Add all variants into the same array and return them.
      *
-     * @returns {Array} The variants.
+     * @returns {String[]} The variants.
      */
     getVariants() {
       // To make sure that we're not editing the property,

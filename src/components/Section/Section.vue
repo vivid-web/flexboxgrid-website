@@ -1,10 +1,6 @@
-<template>
-  <div :class="classNames">
-    <slot />
-  </div>
-</template>
 <script>
 import BlockMixin from '@/mixins/block';
+import ComponentMixin from '@/mixins/component';
 
 export default {
   /**
@@ -23,9 +19,19 @@ export default {
    */
   mixins: [
     BlockMixin,
+    ComponentMixin,
   ],
 };
 </script>
+
+<template>
+  <div :class="classNames">
+    <slot>
+      {{ content }}
+    </slot>
+  </div>
+</template>
+
 <style lang="stylus">
   @import '~@/assets/stylus/_imports.styl'
 

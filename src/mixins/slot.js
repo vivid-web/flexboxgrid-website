@@ -1,18 +1,5 @@
 export default {
   /**
-   * The properties which the component can use.
-   */
-  props: {
-    /**
-     * The content being displayed.
-     */
-    content: {
-      type: [String, Number],
-      required: false,
-    },
-  },
-
-  /**
    * The methods that this mixin will inject.
    */
   methods: {

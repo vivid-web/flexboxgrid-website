@@ -1,19 +1,3 @@
-<template>
-  <UIFooter variant="light">
-    <div class="grid grid--container">
-      <UIFooterBody variant="light">
-        <UILink
-          href="http://vivid-websolutions.nl"
-          target="_blank"
-          variant="light"
-          rel="noopener"
-        >
-          Vivid Websolutions
-        </UILink>
-      </UIFooterBody>
-    </div>
-  </UIFooter>
-</template>
 <script>
 import UIFooter from '@/components/Footer/Footer.vue';
 import UIFooterBody from '@/components/Footer/FooterBody.vue';
@@ -35,3 +19,20 @@ export default {
   },
 };
 </script>
+
+<template>
+  <UIFooter variant="light">
+    <div class="grid grid--container">
+      <UIFooterBody variant="light">
+        <UILink
+          href="http://vivid-websolutions.nl"
+          target="_blank"
+          variant="light"
+          rel="noopener noreferrer"
+        >
+          Vivid Websolutions
+        </UILink>
+      </UIFooterBody>
+    </div>
+  </UIFooter>
+</template>

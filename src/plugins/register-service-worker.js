@@ -1,4 +1,11 @@
-/* eslint-disable no-console */
+/* ============
+ * Register Service Worker
+ * ============
+ *
+ * A script to simplify service worker registration with hooks for common events.
+ *
+ * https://github.com/yyx990803/register-service-worker
+ */
 
 import { register } from 'register-service-worker';
 
