@@ -7,6 +7,7 @@
  * https://github.com/yyx990803/register-service-worker
  */
 
+/* eslint-disable no-console */
 import { register } from 'register-service-worker';
 
 if (process.env.NODE_ENV === 'production') {
