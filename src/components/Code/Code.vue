@@ -1,8 +1,7 @@
-<template>
-  <pre :class="classNames"><slot /></pre>
-</template>
 <script>
 import BlockMixin from '@/mixins/block';
+import ComponentMixin from '@/mixins/component';
+import Prism from 'vue-prism-component';
 
 export default {
   /**
@@ -17,31 +16,65 @@ export default {
   block: 'code',
 
   /**
+   * The components that this component can use.
+   */
+  components: {
+    Prism,
+  },
+
+  /**
    * The mixins injected into this component.
    */
   mixins: [
     BlockMixin,
+    ComponentMixin,
   ],
+
+
+  /**
+   * The properties that this component accepts.
+   */
+  props: {
+    /**
+     * The content that will be rendered in this component.
+     */
+    content: {
+      required: true,
+      type: String,
+    },
+
+    /**
+     * The programming language of the file.
+     */
+    language: {
+      required: false,
+      type: String,
+      default: 'html',
+    },
+  },
 };
 </script>
+
+<template>
+  <div :class="classNames">
+    <Prism
+      :language="language"
+      :code="content"
+    />
+  </div>
+</template>
+
 <style lang="stylus">
-  @import '~@/assets/stylus/_imports.styl'
+@import '~@/assets/stylus/_imports.styl'
 
-  .code
+.code
+  display: block
+  line-height: 1.5rem
+  margin-top: 1rem
+  overflow: auto
+  white-space: pre
+  word-wrap: normal
+
+  .token
     font-family: 'Fira Code', monospace
-    line-height: 1.5rem
-    overflow: auto
-    padding: 0.5rem
-    white-space: pre
-    word-wrap: normal
-
-    +variant('light')
-      background-color: opacity-black(0.05)
-      border: 1px solid $opacity_black_20
-      color: $primary_black
-
-    +variant('dark')
-      background-color: opacity-white(0.05)
-      border: 1px solid $opacity_white_20
-      color: $primary_white
 </style>

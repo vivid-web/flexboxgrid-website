@@ -1,10 +1,10 @@
 /* ============
- * Flexbox Grid
+ * Universal Analytics
  * ============
  *
- * A simple flexbox CSS grid system.
+ * A node module for Google's Universal Analytics and Measurement Protocol
  *
- * http://flexboxgrid.vivid-websolutions.nl
+ * https://github.com/peaksandpies/universal-analytics
  */
 
 import Vue from 'vue';
