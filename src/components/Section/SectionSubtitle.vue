@@ -9,6 +9,12 @@ export default {
   name: 'UISectionSubtitle',
 
   /**
+   * The name of the block.
+   * Used for the BEM styling.
+   */
+  block: 'section',
+
+  /**
    * The name of the element.
    * Used for the BEM styling.
    */

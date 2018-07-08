@@ -9,6 +9,12 @@ export default {
   name: 'UIBlockContent',
 
   /**
+   * The name of the block.
+   * Used for the BEM styling.
+   */
+  block: 'block',
+
+  /**
    * The name of the element.
    * Used for the BEM styling.
    */

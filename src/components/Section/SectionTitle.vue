@@ -9,6 +9,12 @@ export default {
   name: 'UISectionTitle',
 
   /**
+   * The name of the block.
+   * Used for the BEM styling.
+   */
+  block: 'section',
+
+  /**
    * The name of the element.
    * Used for the BEM styling.
    */
@@ -39,7 +45,6 @@ export default {
     +has('title')
       font-size: 2rem
       font-weight: 600
-      margin-bottom: 1rem
       text-align: center
 
       +variant('dark')

@@ -69,6 +69,7 @@ export default {
 
 .code
   display: block
+  flex: 0 0 100%
   line-height: 1.5rem
   margin-top: 1rem
   overflow: auto

@@ -36,7 +36,11 @@ export default {
   @import '~@/assets/stylus/_imports.styl'
 
   .block
+    align-items: stretch
     box-sizing: border-box
+    display: flex
+    flex-direction: column
+    flex-grow: 1
     overflow: hidden
     padding: 1rem
     width: 100%

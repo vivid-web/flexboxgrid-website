@@ -1,4 +1,5 @@
 <script>
+import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
 import SectionLayout from '@/sections/_Layout/Layout.vue';
 import UIBlock from '@/components/Block/Block.vue';
 import UIBlockContent from '@/components/Block/BlockContent.vue';
@@ -15,6 +16,7 @@ export default {
    * The components that this section can use.
    */
   components: {
+    ...FlexboxgridVue,
     SectionLayout,
     UIBlock,
     UIBlockContent,
@@ -40,18 +42,14 @@ export default {
    */
   methods: {
     /**
-     * Will compute the column class names.
+     * Will compute the column variant.
      *
      * @param {int} numberOfColumns The number of columns.
      *
-     * @returns {Array} The array of class names.
+     * @returns {String} The column variant.
      */
-    columnClassNames(numberOfColumns) {
-      const classNames = [];
-
-      classNames.push(`col--sm-${numberOfColumns}`);
-
-      return classNames;
+    columnVariant(numberOfColumns) {
+      return `sm-${numberOfColumns}`;
     },
   },
 };
@@ -64,31 +62,28 @@ export default {
     :subtitle="subtitle"
     :code-example="codeExample"
   >
-    <div class="grid grid--container">
-      <div
+    <VGrid variant="container">
+      <VRow
         v-for="(index) in numberOfRows"
         :key="index"
-        class="row"
       >
-        <div
+        <VCol
           v-if="index <= 12"
-          :class="columnClassNames(numberOfRows - index)"
-          class="col"
+          :variant="columnVariant(numberOfRows - index)"
         >
           <UIBlock :variant="theme">
             <UIBlockContent :variant="theme"/>
           </UIBlock>
-        </div>
-        <div
+        </VCol>
+        <VCol
           v-if="index > 1"
-          :class="columnClassNames(index - 1)"
-          class="col"
+          :variant="columnVariant(index - 1)"
         >
           <UIBlock :variant="theme">
             <UIBlockContent :variant="theme"/>
           </UIBlock>
-        </div>
-      </div>
-    </div>
+        </VCol>
+      </VRow>
+    </VGrid>
   </SectionLayout>
 </template>

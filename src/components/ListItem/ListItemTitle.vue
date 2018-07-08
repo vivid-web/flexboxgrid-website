@@ -12,6 +12,12 @@ export default {
    * The name of the element.
    * Used for the BEM styling.
    */
+  block: 'list-item',
+
+  /**
+   * The name of the element.
+   * Used for the BEM styling.
+   */
   element: 'title',
 
   /**

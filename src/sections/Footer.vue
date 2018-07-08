@@ -1,4 +1,5 @@
 <script>
+import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
 import UIFooter from '@/components/Footer/Footer.vue';
 import UIFooterBody from '@/components/Footer/FooterBody.vue';
 import UILink from '@/components/Link/Link.vue';
@@ -13,6 +14,7 @@ export default {
    * The components that this section can use.
    */
   components: {
+    ...FlexboxgridVue,
     UIFooter,
     UIFooterBody,
     UILink,
@@ -22,17 +24,21 @@ export default {
 
 <template>
   <UIFooter variant="light">
-    <div class="grid grid--container">
-      <UIFooterBody variant="light">
-        <UILink
-          href="http://vivid-websolutions.nl"
-          target="_blank"
-          variant="light"
-          rel="noopener noreferrer"
-        >
-          Vivid Websolutions
-        </UILink>
-      </UIFooterBody>
-    </div>
+    <VGrid variant="container">
+      <VRow>
+        <VCol>
+          <UIFooterBody variant="light">
+            <UILink
+              href="http://vivid-websolutions.nl"
+              target="_blank"
+              variant="light"
+              rel="noopener noreferrer"
+            >
+              Vivid Websolutions
+            </UILink>
+          </UIFooterBody>
+        </VCol>
+      </VRow>
+    </VGrid>
   </UIFooter>
 </template>

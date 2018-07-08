@@ -9,6 +9,12 @@ export default {
   name: 'UIFooterBody',
 
   /**
+   * The name of the block.
+   * Used for the BEM styling.
+   */
+  block: 'footer',
+
+  /**
    * The name of the element.
    * Used for the BEM styling.
    */

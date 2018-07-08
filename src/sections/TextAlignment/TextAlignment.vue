@@ -1,4 +1,5 @@
 <script>
+import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
 import SectionLayout from '@/sections/_Layout/Layout.vue';
 import UIBlock from '@/components/Block/Block.vue';
 import UIBlockContent from '@/components/Block/BlockContent.vue';
@@ -15,6 +16,7 @@ export default {
    * The components that this section can use.
    */
   components: {
+    ...FlexboxgridVue,
     SectionLayout,
     UIBlock,
     UIBlockContent,
@@ -43,39 +45,30 @@ export default {
     :subtitle="subtitle"
     :code-example="codeExample"
   >
-    <div class="grid grid--container">
-      <div class="row">
-        <div class="col col--sm-5">
+    <VGrid variant="container">
+      <VRow>
+        <VCol variant="sm-5">
           <UIBlock :variant="theme">
-            <UIBlockContent
-              :variant="theme"
-              class="text--xs-center text--sm-left"
-            >
-              5
+            <UIBlockContent :variant="theme">
+              <VText :variants="['xs-center', 'sm-left']">5</VText>
             </UIBlockContent>
           </UIBlock>
-        </div>
-        <div class="col col--sm-4">
+        </VCol>
+        <VCol variant="sm-4">
           <UIBlock :variant="theme">
-            <UIBlockContent
-              :variant="theme"
-              class="text--xs-center text--sm-center"
-            >
-              4
+            <UIBlockContent :variant="theme">
+              <VText :variants="['xs-center', 'sm-center']">4</VText>
             </UIBlockContent>
           </UIBlock>
-        </div>
-        <div class="col col--sm-3">
+        </VCol>
+        <VCol variant="sm-3">
           <UIBlock :variant="theme">
-            <UIBlockContent
-              :variant="theme"
-              class="text--xs-center text--sm-right"
-            >
-              3
+            <UIBlockContent :variant="theme">
+              <VText :variants="['xs-center', 'sm-right']">3</VText>
             </UIBlockContent>
           </UIBlock>
-        </div>
-      </div>
-    </div>
+        </VCol>
+      </VRow>
+    </VGrid>
   </SectionLayout>
 </template>

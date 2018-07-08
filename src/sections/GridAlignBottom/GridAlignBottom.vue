@@ -1,4 +1,5 @@
 <script>
+import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
 import SectionLayout from '@/sections/_Layout/Layout.vue';
 import UIBlock from '@/components/Block/Block.vue';
 import UIBlockContent from '@/components/Block/BlockContent.vue';
@@ -15,6 +16,7 @@ export default {
    * The components that this section can use.
    */
   components: {
+    ...FlexboxgridVue,
     SectionLayout,
     UIBlock,
     UIBlockContent,
@@ -43,9 +45,10 @@ export default {
     :subtitle="subtitle"
     :code-example="codeExample"
   >
-    <div class="grid grid--container">
-      <div class="row row--sm-bottom">
-        <div class="col col--sm-4">
+
+    <VGrid variant="container">
+      <VRow variant="sm-bottom">
+        <VCol variant="sm-4">
           <UIBlock :variant="theme">
             <UIBlockContent :variant="theme">
               <p>
@@ -63,8 +66,8 @@ export default {
               </p>
             </UIBlockContent>
           </UIBlock>
-        </div>
-        <div class="col col--sm-3">
+        </VCol>
+        <VCol variant="sm-3">
           <UIBlock :variant="theme">
             <UIBlockContent :variant="theme">
               <p>
@@ -82,8 +85,8 @@ export default {
               </p>
             </UIBlockContent>
           </UIBlock>
-        </div>
-        <div class="col col--sm-5">
+        </VCol>
+        <VCol variant="sm-5">
           <UIBlock :variant="theme">
             <UIBlockContent :variant="theme">
               <p>
@@ -101,8 +104,8 @@ export default {
               </p>
             </UIBlockContent>
           </UIBlock>
-        </div>
-      </div>
-    </div>
+        </VCol>
+      </VRow>
+    </VGrid>
   </SectionLayout>
 </template>

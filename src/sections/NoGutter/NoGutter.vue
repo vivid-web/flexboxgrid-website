@@ -1,4 +1,5 @@
 <script>
+import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
 import SectionLayout from '@/sections/_Layout/Layout.vue';
 import UIBlock from '@/components/Block/Block.vue';
 import UIBlockContent from '@/components/Block/BlockContent.vue';
@@ -15,6 +16,7 @@ export default {
    * The components that this section can use.
    */
   components: {
+    ...FlexboxgridVue,
     SectionLayout,
     UIBlock,
     UIBlockContent,
@@ -40,18 +42,18 @@ export default {
    */
   methods: {
     /**
-     * Will compute the column class names.
+     * Will compute the column variants.
      *
-     * @param {int} index The current index.
+     * @param {int} numberOfColumns The number of columns.
      *
-     * @returns {Array} The array of class names.
+     * @returns {String[]} The column variants.
      */
-    columnClassNames(index) {
-      const classNames = [];
+    columnVariants(numberOfColumns) {
+      const variants = ['no-gutters'];
 
-      classNames.push(`col--sm-${index + 2}`);
+      variants.push(`sm-${numberOfColumns + 2}`);
 
-      return classNames;
+      return variants;
     },
   },
 };
@@ -64,21 +66,20 @@ export default {
     :subtitle="subtitle"
     :code-example="codeExample"
   >
-    <div class="grid grid--container grid--no-gutters">
-      <div class="row row--no-gutters">
-        <div
+    <VGrid :variants="['container', 'no-gutters']">
+      <VRow variant="no-gutters">
+        <VCol
           v-for="(index) in numberOfColumns"
           :key="index"
-          :class="columnClassNames(index)"
-          class="col col--no-gutters"
+          :variants="columnVariants(index)"
         >
           <UIBlock :variant="theme">
             <UIBlockContent :variants="[theme, 'center']">
               {{ index }}
             </UIBlockContent>
           </UIBlock>
-        </div>
-      </div>
-    </div>
+        </VCol>
+      </VRow>
+    </VGrid>
   </SectionLayout>
 </template>

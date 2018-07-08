@@ -1,4 +1,5 @@
 <script>
+import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
 import UIButton from '@/components/Button/Button.vue';
 import UICard from '@/components/Card/Card.vue';
 import UICardHeader from '@/components/Card/CardHeader.vue';
@@ -26,6 +27,7 @@ export default {
    * The components that this section can use.
    */
   components: {
+    ...FlexboxgridVue,
     UIButton,
     UICard,
     UICardHeader,
@@ -48,10 +50,10 @@ export default {
 
 <template>
   <UIJumbotron variant="light">
-    <div class="grid grid--container">
+    <VGrid variant="container">
       <UIJumbotronHeader variant="light">
-        <div class="row">
-          <div class="col col--md-12">
+        <VRow>
+          <VCol variant="md-12">
             <UIJumbotronTitle variant="light">
               Flexbox Grid
             </UIJumbotronTitle>
@@ -59,10 +61,10 @@ export default {
             <UIJumbotronSubtitle>
               A flex-based CSS grid system according to the BEM standard.
             </UIJumbotronSubtitle>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col--md-4 col--md-offset-2">
+          </VCol>
+        </VRow>
+        <VRow>
+          <VCol :variants="['md-4', 'md-offset-2']">
             <UIButton
               :variants="['primary', 'block']"
               href="https://raw.githubusercontent.com/vivid-web/flexbox-grid-stylus/master/dist/flexbox-grid.css"
@@ -71,8 +73,8 @@ export default {
             >
               Download Full
             </UIButton>
-          </div>
-          <div class="col col--md-4">
+          </VCol>
+          <VCol variant="md-4">
             <UIButton
               :variants="['primary', 'block']"
               href="https://raw.githubusercontent.com/vivid-web/flexbox-grid-stylus/master/dist/flexbox-grid.min.css"
@@ -81,160 +83,162 @@ export default {
             >
               Download Minified
             </UIButton>
-          </div>
-        </div>
+          </VCol>
+        </VRow>
       </UIJumbotronHeader>
       <UIJumbotronBody>
-        <div class="row">
-          <div class="col col--md col--sm-flex">
-            <UICard variant="light">
-              <UICardHeader variant="light">
-                <UICardTitle variant="light">
-                  Using SASS
-                </UICardTitle>
-              </UICardHeader>
-              <UICardBody variant="light">
-                <UICardList variant="light">
-                  <UIListItem variant="light">
-                    <UIListItemTitle variant="light">
-                      With Bower
-                    </UIListItemTitle>
-                    <UIListItemContent variant="light">
-                      <UICode
-                        variant="light"
-                        content="bower install flexbox-grid-sass"
-                        language="bash"
-                      />
-                    </UIListItemContent>
-                  </UIListItem>
-                  <UIListItem variant="light">
-                    <UIListItemTitle variant="light">
-                      With NPM
-                    </UIListItemTitle>
-                    <UIListItemContent variant="light">
-                      <UICode
-                        variant="light"
-                        content="npm install flexbox-grid-sass"
-                        language="bash"
-                      />
-                    </UIListItemContent>
-                  </UIListItem>
-                  <UIListItem variant="light">
-                    <UIListItemContent variant="light">
-                      <UIButton
-                        variant="primary"
-                        href="http://github.com/vivid-web/flexbox-grid-sass"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        GitHub
-                      </UIButton>
-                    </UIListItemContent>
-                  </UIListItem>
-                </UICardList>
-              </UICardBody>
-            </UICard>
-          </div>
-          <div class="col col--md col--sm-flex">
-            <UICard variant="light">
-              <UICardHeader variant="light">
-                <UICardTitle variant="light">
-                  Using LESS
-                </UICardTitle>
-              </UICardHeader>
-              <UICardBody variant="light">
-                <UICardList variant="light">
-                  <UIListItem variant="light">
-                    <UIListItemTitle variant="light">
-                      With Bower
-                    </UIListItemTitle>
-                    <UIListItemContent variant="light">
-                      <UICode
-                        variant="light"
-                        content="bower install flexbox-grid-less"
-                        language="bash"
-                      />
-                    </UIListItemContent>
-                  </UIListItem>
-                  <UIListItem variant="light">
-                    <UIListItemTitle variant="light">
-                      With NPM
-                    </UIListItemTitle>
-                    <UIListItemContent variant="light">
-                      <UICode
-                        variant="light"
-                        content="npm install flexbox-grid-less"
-                        language="bash"
-                      />
-                    </UIListItemContent>
-                  </UIListItem>
-                  <UIListItem variant="light">
-                    <UIListItemContent variant="light">
-                      <UIButton
-                        variant="primary"
-                        href="http://github.com/vivid-web/flexbox-grid-less"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        GitHub
-                      </UIButton>
-                    </UIListItemContent>
-                  </UIListItem>
-                </UICardList>
-              </UICardBody>
-            </UICard>
-          </div>
-          <div class="col col--md col--sm-flex">
-            <UICard variant="light">
-              <UICardHeader variant="light">
-                <UICardTitle variant="light">
-                  Using Stylus
-                </UICardTitle>
-              </UICardHeader>
-              <UICardBody variant="light">
-                <UICardList variant="light">
-                  <UIListItem variant="light">
-                    <UIListItemTitle variant="light">
-                      With Bower
-                    </UIListItemTitle>
-                    <UIListItemContent variant="light">
-                      <UICode
-                        variant="light"
-                        content="bower install flexbox-grid-stylus"
-                        language="bash"
-                      />
-                    </UIListItemContent>
-                  </UIListItem>
-                  <UIListItem variant="light">
-                    <UIListItemTitle variant="light">
-                      With NPM
-                    </UIListItemTitle>
-                    <UIListItemContent variant="light">
-                      <UICode
-                        variant="light"
-                        content="npm install flexbox-grid-stylus"
-                        language="bash"
-                      />
-                    </UIListItemContent>
-                  </UIListItem>
-                  <UIListItem variant="light">
-                    <UIListItemContent variant="light">
-                      <UIButton
-                        variant="primary"
-                        href="http://github.com/vivid-web/flexbox-grid-stylus"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        GitHub
-                      </UIButton>
-                    </UIListItemContent>
-                  </UIListItem>
-                </UICardList>
-              </UICardBody>
-            </UICard>
-          </div>
-        </div>
+        <VGrid>
+          <VRow>
+            <VCol :variants="['md', 'sm-flex']">
+              <UICard variant="light">
+                <UICardHeader variant="light">
+                  <UICardTitle variant="light">
+                    Using SASS
+                  </UICardTitle>
+                </UICardHeader>
+                <UICardBody variant="light">
+                  <UICardList variant="light">
+                    <UIListItem variant="light">
+                      <UIListItemTitle variant="light">
+                        With Bower
+                      </UIListItemTitle>
+                      <UIListItemContent variant="light">
+                        <UICode
+                          variant="light"
+                          content="bower install flexbox-grid-sass"
+                          language="bash"
+                        />
+                      </UIListItemContent>
+                    </UIListItem>
+                    <UIListItem variant="light">
+                      <UIListItemTitle variant="light">
+                        With NPM
+                      </UIListItemTitle>
+                      <UIListItemContent variant="light">
+                        <UICode
+                          variant="light"
+                          content="npm install flexbox-grid-sass"
+                          language="bash"
+                        />
+                      </UIListItemContent>
+                    </UIListItem>
+                    <UIListItem variant="light">
+                      <UIListItemContent variant="light">
+                        <UIButton
+                          variant="primary"
+                          href="http://github.com/vivid-web/flexbox-grid-sass"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          GitHub
+                        </UIButton>
+                      </UIListItemContent>
+                    </UIListItem>
+                  </UICardList>
+                </UICardBody>
+              </UICard>
+            </VCol>
+            <VCol :variants="['md', 'sm-flex']">
+              <UICard variant="light">
+                <UICardHeader variant="light">
+                  <UICardTitle variant="light">
+                    Using LESS
+                  </UICardTitle>
+                </UICardHeader>
+                <UICardBody variant="light">
+                  <UICardList variant="light">
+                    <UIListItem variant="light">
+                      <UIListItemTitle variant="light">
+                        With Bower
+                      </UIListItemTitle>
+                      <UIListItemContent variant="light">
+                        <UICode
+                          variant="light"
+                          content="bower install flexbox-grid-less"
+                          language="bash"
+                        />
+                      </UIListItemContent>
+                    </UIListItem>
+                    <UIListItem variant="light">
+                      <UIListItemTitle variant="light">
+                        With NPM
+                      </UIListItemTitle>
+                      <UIListItemContent variant="light">
+                        <UICode
+                          variant="light"
+                          content="npm install flexbox-grid-less"
+                          language="bash"
+                        />
+                      </UIListItemContent>
+                    </UIListItem>
+                    <UIListItem variant="light">
+                      <UIListItemContent variant="light">
+                        <UIButton
+                          variant="primary"
+                          href="http://github.com/vivid-web/flexbox-grid-less"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          GitHub
+                        </UIButton>
+                      </UIListItemContent>
+                    </UIListItem>
+                  </UICardList>
+                </UICardBody>
+              </UICard>
+            </VCol>
+            <VCol :variants="['md', 'sm-flex']">
+              <UICard variant="light">
+                <UICardHeader variant="light">
+                  <UICardTitle variant="light">
+                    Using Stylus
+                  </UICardTitle>
+                </UICardHeader>
+                <UICardBody variant="light">
+                  <UICardList variant="light">
+                    <UIListItem variant="light">
+                      <UIListItemTitle variant="light">
+                        With Bower
+                      </UIListItemTitle>
+                      <UIListItemContent variant="light">
+                        <UICode
+                          variant="light"
+                          content="bower install flexbox-grid-stylus"
+                          language="bash"
+                        />
+                      </UIListItemContent>
+                    </UIListItem>
+                    <UIListItem variant="light">
+                      <UIListItemTitle variant="light">
+                        With NPM
+                      </UIListItemTitle>
+                      <UIListItemContent variant="light">
+                        <UICode
+                          variant="light"
+                          content="npm install flexbox-grid-stylus"
+                          language="bash"
+                        />
+                      </UIListItemContent>
+                    </UIListItem>
+                    <UIListItem variant="light">
+                      <UIListItemContent variant="light">
+                        <UIButton
+                          variant="primary"
+                          href="http://github.com/vivid-web/flexbox-grid-stylus"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          GitHub
+                        </UIButton>
+                      </UIListItemContent>
+                    </UIListItem>
+                  </UICardList>
+                </UICardBody>
+              </UICard>
+            </VCol>
+          </VRow>
+        </VGrid>
       </UIJumbotronBody>
-    </div>
+    </VGrid>
   </UIJumbotron>
 </template>

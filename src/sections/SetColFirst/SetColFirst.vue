@@ -1,4 +1,5 @@
 <script>
+import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
 import SectionLayout from '@/sections/_Layout/Layout.vue';
 import UIBlock from '@/components/Block/Block.vue';
 import UIBlockContent from '@/components/Block/BlockContent.vue';
@@ -15,6 +16,7 @@ export default {
    * The components that this section can use.
    */
   components: {
+    ...FlexboxgridVue,
     SectionLayout,
     UIBlock,
     UIBlockContent,
@@ -40,17 +42,17 @@ export default {
    */
   methods: {
     /**
-     * Will compute the column class names.
+     * Will compute the column variants.
      *
-     * @param {int} index The current index.
+     * @param {Number} index The current index.
      *
-     * @returns {Array} The array of class names.
+     * @returns {String[]} The array of variants.
      */
-    columnClassNames(index) {
-      const classNames = [];
+    columnVariants(index) {
+      const classNames = ['sm-2'];
 
       if (index === this.numberOfColumns) {
-        classNames.push('col--sm-first');
+        classNames.push('sm-first');
       }
 
       return classNames;
@@ -66,21 +68,20 @@ export default {
     :subtitle="subtitle"
     :code-example="codeExample"
   >
-    <div class="grid grid--container">
-      <div class="row">
-        <div
+    <VGrid variant="container">
+      <VRow>
+        <VCol
           v-for="(index) in numberOfColumns"
           :key="index"
-          :class="columnClassNames(index)"
-          class="col col--sm-2"
+          :variants="columnVariants(index)"
         >
           <UIBlock :variant="theme">
             <UIBlockContent :variants="[theme, 'center']">
               {{ index }}
             </UIBlockContent>
           </UIBlock>
-        </div>
-      </div>
-    </div>
+        </VCol>
+      </VRow>
+    </VGrid>
   </SectionLayout>
 </template>

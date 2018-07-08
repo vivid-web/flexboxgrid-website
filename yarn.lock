@@ -735,6 +735,13 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@vivid-web/flexboxgrid-vue@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@vivid-web/flexboxgrid-vue/-/flexboxgrid-vue-1.0.0.tgz#3164892d7b813f68e673348e6075e9fcdc8a54c1"
+  dependencies:
+    stylus "^0.54.5"
+    vue "^2.5.16"
+
 "@vue/babel-preset-app@^3.0.0-rc.3":
   version "3.0.0-rc.3"
   resolved "https://registry.yarnpkg.com/@vue/babel-preset-app/-/babel-preset-app-3.0.0-rc.3.tgz#e4f5f884448489b1b4651c986548639f3bec823f"
@@ -3182,10 +3189,6 @@ flat-cache@^1.2.1:
 flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
-
-flexbox-grid-stylus@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/flexbox-grid-stylus/-/flexbox-grid-stylus-3.2.2.tgz#e007c41e928774ea065db8ee6099346672894b75"
 
 flush-write-stream@^1.0.0:
   version "1.0.3"

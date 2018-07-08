@@ -18,22 +18,13 @@ export default {
    */
   computed: {
     /**
-     * Will get the block from the parent.
-     *
-     * @returns {String} The correct block name.
-     */
-    block() {
-      return this.$parent.block || this.$parent.$options.block;
-    },
-
-    /**
      * Will get the CSS module class names.
      *
      * @returns {String[]} The CSS module class names.
      */
     classNames() {
       return this.$css
-        .getElementClassNames(this.block, this.$options.element, this.getVariants)
+        .getElementClassNames(this.$options.block, this.$options.element, this.getVariants)
         .map(className => this.getClassName(className));
     },
   },

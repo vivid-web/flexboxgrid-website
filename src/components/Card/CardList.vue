@@ -9,6 +9,12 @@ export default {
   name: 'UICardList',
 
   /**
+   * The name of the block.
+   * Used for the BEM styling.
+   */
+  block: 'card',
+
+  /**
    * The name of the element.
    * Used for the BEM styling.
    */
