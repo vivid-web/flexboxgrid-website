@@ -97,14 +97,14 @@ export default {
       <slot/>
       <VGrid variant="container">
         <VRow>
-          <VCol variant="md">
+          <VCol variant="md-6">
             <UICode
               :variant="theme"
               :content="codeExamples.vue"
               language="html"
             />
           </VCol>
-          <VCol variant="md">
+          <VCol variant="md-6">
             <UICode
               :variant="theme"
               :content="codeExamples.html"
