@@ -735,9 +735,9 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@vivid-web/flexboxgrid-vue@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@vivid-web/flexboxgrid-vue/-/flexboxgrid-vue-1.0.2.tgz#e7d10630b5dd84034f206f8e440bd87b3489d21f"
+"@vivid-web/flexboxgrid-vue@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@vivid-web/flexboxgrid-vue/-/flexboxgrid-vue-1.0.3.tgz#2d9770f79c2246760e1d8b74dc62600552668dad"
   dependencies:
     stylus "^0.54.5"
     vue "^2.5.16"
