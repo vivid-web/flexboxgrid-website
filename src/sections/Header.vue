@@ -67,7 +67,7 @@ export default {
           <VCol :variants="['md-4', 'md-offset-2']">
             <UIButton
               :variants="['primary', 'block']"
-              href="https://raw.githubusercontent.com/vivid-web/flexbox-grid-stylus/master/dist/flexbox-grid.css"
+              href="https://raw.githubusercontent.com/vivid-web/flexboxgrid-stylus/master/dist/flexboxgrid.css"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -77,7 +77,7 @@ export default {
           <VCol variant="md-4">
             <UIButton
               :variants="['primary', 'block']"
-              href="https://raw.githubusercontent.com/vivid-web/flexbox-grid-stylus/master/dist/flexbox-grid.min.css"
+              href="https://raw.githubusercontent.com/vivid-web/flexboxgrid-stylus/master/dist/flexboxgrid.min.css"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -89,7 +89,58 @@ export default {
       <UIJumbotronBody>
         <VGrid>
           <VRow>
-            <VCol :variants="['md', 'sm-flex']">
+            <VCol :variants="['md']">
+              <UICard variant="light">
+                <UICardHeader variant="light">
+                  <UICardTitle variant="light">
+                    With Vue
+                  </UICardTitle>
+                </UICardHeader>
+                <UICardBody variant="light">
+                  <UICardList variant="light">
+                    <UIListItem variant="light">
+                      <UIListItemTitle variant="light">
+                        With NPM
+                      </UIListItemTitle>
+                      <UIListItemContent variant="light">
+                        <UICode
+                          variant="light"
+                          content="npm install @vivid-web/flexboxgrid-vue --save"
+                          language="bash"
+                        />
+                      </UIListItemContent>
+                    </UIListItem>
+                    <UIListItem variant="light">
+                      <UIListItemTitle variant="light">
+                        With Yarn
+                      </UIListItemTitle>
+                      <UIListItemContent variant="light">
+                        <UICode
+                          variant="light"
+                          content="yarn add flexboxgrid-vue"
+                          language="bash"
+                        />
+                      </UIListItemContent>
+                    </UIListItem>
+                    <UIListItem variant="light">
+                      <UIListItemContent variant="light">
+                        <UIButton
+                          variant="primary"
+                          href="http://github.com/vivid-web/flexboxgrid-vue"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          GitHub
+                        </UIButton>
+                      </UIListItemContent>
+                    </UIListItem>
+                  </UICardList>
+                </UICardBody>
+              </UICard>
+            </VCol>
+          </VRow>
+          <VRow>
+            <VCol :variants="['md-4', 'sm-flex']">
               <UICard variant="light">
                 <UICardHeader variant="light">
                   <UICardTitle variant="light">
@@ -100,24 +151,24 @@ export default {
                   <UICardList variant="light">
                     <UIListItem variant="light">
                       <UIListItemTitle variant="light">
-                        With Bower
+                        With NPM
                       </UIListItemTitle>
                       <UIListItemContent variant="light">
                         <UICode
                           variant="light"
-                          content="bower install flexbox-grid-sass"
+                          content="npm install @vivid-web/flexboxgrid-sass --save"
                           language="bash"
                         />
                       </UIListItemContent>
                     </UIListItem>
                     <UIListItem variant="light">
                       <UIListItemTitle variant="light">
-                        With NPM
+                        With Yarn
                       </UIListItemTitle>
                       <UIListItemContent variant="light">
                         <UICode
                           variant="light"
-                          content="npm install flexbox-grid-sass"
+                          content="yarn add @vivid-web/flexboxgrid-sass"
                           language="bash"
                         />
                       </UIListItemContent>
@@ -126,7 +177,7 @@ export default {
                       <UIListItemContent variant="light">
                         <UIButton
                           variant="primary"
-                          href="http://github.com/vivid-web/flexbox-grid-sass"
+                          href="http://github.com/vivid-web/flexboxgrid-sass"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -138,7 +189,7 @@ export default {
                 </UICardBody>
               </UICard>
             </VCol>
-            <VCol :variants="['md', 'sm-flex']">
+            <VCol :variants="['md-4', 'sm-flex']">
               <UICard variant="light">
                 <UICardHeader variant="light">
                   <UICardTitle variant="light">
@@ -149,33 +200,34 @@ export default {
                   <UICardList variant="light">
                     <UIListItem variant="light">
                       <UIListItemTitle variant="light">
-                        With Bower
+                        With NPM
                       </UIListItemTitle>
                       <UIListItemContent variant="light">
                         <UICode
                           variant="light"
-                          content="bower install flexbox-grid-less"
+                          content="npm install @vivid-web/flexboxgrid-less --save"
                           language="bash"
                         />
                       </UIListItemContent>
                     </UIListItem>
                     <UIListItem variant="light">
                       <UIListItemTitle variant="light">
-                        With NPM
+                        With Yarn
                       </UIListItemTitle>
                       <UIListItemContent variant="light">
                         <UICode
                           variant="light"
-                          content="npm install flexbox-grid-less"
+                          content="yarn add @vivid-web/flexboxgrid-less"
                           language="bash"
                         />
                       </UIListItemContent>
                     </UIListItem>
+
                     <UIListItem variant="light">
                       <UIListItemContent variant="light">
                         <UIButton
                           variant="primary"
-                          href="http://github.com/vivid-web/flexbox-grid-less"
+                          href="http://github.com/vivid-web/flexboxgrid-less"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -187,7 +239,7 @@ export default {
                 </UICardBody>
               </UICard>
             </VCol>
-            <VCol :variants="['md', 'sm-flex']">
+            <VCol :variants="['md-4', 'sm-flex']">
               <UICard variant="light">
                 <UICardHeader variant="light">
                   <UICardTitle variant="light">
@@ -198,24 +250,24 @@ export default {
                   <UICardList variant="light">
                     <UIListItem variant="light">
                       <UIListItemTitle variant="light">
-                        With Bower
+                        With NPM
                       </UIListItemTitle>
                       <UIListItemContent variant="light">
                         <UICode
                           variant="light"
-                          content="bower install flexbox-grid-stylus"
+                          content="npm install @vivid-web/flexboxgrid-stylus --save"
                           language="bash"
                         />
                       </UIListItemContent>
                     </UIListItem>
                     <UIListItem variant="light">
                       <UIListItemTitle variant="light">
-                        With NPM
+                        With Yarn
                       </UIListItemTitle>
                       <UIListItemContent variant="light">
                         <UICode
                           variant="light"
-                          content="npm install flexbox-grid-stylus"
+                          content="yarn add @vivid-web/flexboxgrid-stylus"
                           language="bash"
                         />
                       </UIListItemContent>
@@ -224,7 +276,7 @@ export default {
                       <UIListItemContent variant="light">
                         <UIButton
                           variant="primary"
-                          href="http://github.com/vivid-web/flexbox-grid-stylus"
+                          href="http://github.com/vivid-web/flexboxgrid-stylus"
                           target="_blank"
                           rel="noopener noreferrer"
                         >

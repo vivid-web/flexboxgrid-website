@@ -1,5 +1,6 @@
-<div class="grid grid--container">
-  <div class="row row--sm-reverse">
+export default `<!-- HTML -->
+<div class="grid">
+  <div class="row">
     <div class="col col--sm">
       ...
     </div>
@@ -9,6 +10,5 @@
     <div class="col col--sm">
       ...
     </div>
-    ...
   </div>
-</div>
+</div>`;

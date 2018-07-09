@@ -68,8 +68,8 @@ export default {
     /**
      * The code example of the section.
      */
-    codeExample: {
-      type: String,
+    codeExamples: {
+      type: Object,
       required: true,
     },
   },
@@ -97,10 +97,17 @@ export default {
       <slot/>
       <VGrid variant="container">
         <VRow>
-          <VCol>
+          <VCol variant="md">
             <UICode
               :variant="theme"
-              :content="codeExample"
+              :content="codeExamples.vue"
+              language="html"
+            />
+          </VCol>
+          <VCol variant="md">
+            <UICode
+              :variant="theme"
+              :content="codeExamples.html"
               language="html"
             />
           </VCol>

@@ -4,7 +4,8 @@ import SectionLayout from '@/sections/_Layout/Layout.vue';
 import UIBlock from '@/components/Block/Block.vue';
 import UIBlockContent from '@/components/Block/BlockContent.vue';
 
-import codeExample from 'raw-loader!./code-example.html';
+import codeExampleHtml from './code-example.html';
+import codeExampleVue from './code-example.vue';
 
 export default {
   /**
@@ -32,7 +33,10 @@ export default {
       theme: 'light',
       title: 'No Gutters',
       subtitle: 'The content can be displayed without the gutters',
-      codeExample,
+      codeExamples: {
+        html: codeExampleHtml,
+        vue: codeExampleVue,
+      },
       numberOfColumns: 3,
     };
   },
@@ -64,7 +68,7 @@ export default {
     :theme="theme"
     :title="title"
     :subtitle="subtitle"
-    :code-example="codeExample"
+    :code-examples="codeExamples"
   >
     <VGrid :variants="['container', 'no-gutters']">
       <VRow variant="no-gutters">

@@ -1,3 +1,4 @@
+export default `<!-- HTML -->
 <div class="grid grid--container">
   <div class="row">
     <div class="col col--sm-1">
@@ -12,6 +13,6 @@
     <div class="col col--sm-4">
       ...
     </div>
-    ...
   </div>
-</div>
+</div>`;
+

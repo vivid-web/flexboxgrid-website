@@ -36,6 +36,7 @@ export default {
   @import '~@/assets/stylus/_imports.styl'
 
   .card
+    height: 100%
     overflow: hidden
     padding: 1rem
     width: 100%
