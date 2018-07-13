@@ -1,8 +1,10 @@
 <script>
 import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
 import SectionLayout from '@/sections/_Layout/Layout.vue';
-import UIBlock from '@/components/Block/Block.vue';
-import UIBlockContent from '@/components/Block/BlockContent.vue';
+import {
+  Block as UIBlock,
+  BlockContent as UIBlockContent,
+} from '@/components';
 
 import codeExampleHtml from './code-example.html';
 import codeExampleVue from './code-example.vue';

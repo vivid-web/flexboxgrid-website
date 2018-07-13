@@ -1,14 +1,17 @@
 <script>
 import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
-import UIBlock from '@/components/Block/Block.vue';
-import UIBlockContent from '@/components/Block/BlockContent.vue';
-import UICode from '@/components/Code/Code.vue';
-import UISection from '@/components/Section/Section.vue';
-import UISectionBody from '@/components/Section/SectionBody.vue';
-import UISectionHeader from '@/components/Section/SectionHeader.vue';
-import UISectionSubtitle from '@/components/Section/SectionSubtitle.vue';
-import UISectionTitle from '@/components/Section/SectionTitle.vue';
-import UISectionUnderline from '@/components/Section/SectionUnderline.vue';
+import {
+  Block as UIBlock,
+  BlockContent as UIBlockContent,
+  Code as UICode,
+  Section as UISection,
+  SectionBody as UISectionBody,
+  SectionHeader as UISectionHeader,
+  SectionSubtitle as UISectionSubtitle,
+  SectionTitle as UISectionTitle,
+  SectionUnderline as UISectionUnderline,
+} from '@/components';
+
 
 export default {
   /**

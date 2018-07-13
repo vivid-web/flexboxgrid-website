@@ -1,21 +1,23 @@
 <script>
 import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
-import UIButton from '@/components/Button/Button.vue';
-import UICard from '@/components/Card/Card.vue';
-import UICardHeader from '@/components/Card/CardHeader.vue';
-import UICardBody from '@/components/Card/CardBody.vue';
-import UICardList from '@/components/Card/CardList.vue';
-import UIListItem from '@/components/ListItem/ListItem.vue';
-import UIListItemContent from '@/components/ListItem/ListItemContent.vue';
-import UIListItemTitle from '@/components/ListItem/ListItemTitle.vue';
-import UICardTitle from '@/components/Card/CardTitle.vue';
-import UICode from '@/components/Code/Code.vue';
-import UIJumbotron from '@/components/Jumbotron/Jumbotron.vue';
-import UIJumbotronBody from '@/components/Jumbotron/JumbotronBody.vue';
-import UIJumbotronHeader from '@/components/Jumbotron/JumbotronHeader.vue';
-import UIJumbotronSubtitle from '@/components/Jumbotron/JumbotronSubtitle.vue';
-import UIJumbotronTitle from '@/components/Jumbotron/JumbotronTitle.vue';
-import UIJumbotronUnderline from '@/components/Jumbotron/JumbotronUnderline.vue';
+import {
+  Button as UIButton,
+  Card as UICard,
+  CardHeader as UICardHeader,
+  CardBody as UICardBody,
+  CardList as UICardList,
+  CardTitle as UICardTitle,
+  Code as UICode,
+  Jumbotron as UIJumbotron,
+  JumbotronBody as UIJumbotronBody,
+  JumbotronHeader as UIJumbotronHeader,
+  JumbotronSubtitle as UIJumbotronSubtitle,
+  JumbotronTitle as UIJumbotronTitle,
+  JumbotronUnderline as UIJumbotronUnderline,
+  ListItem as UIListItem,
+  ListItemContent as UIListItemContent,
+  ListItemTitle as UIListItemTitle,
+} from '@/components';
 
 export default {
   /**

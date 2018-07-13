@@ -14,7 +14,6 @@
  *    1.3 Variables
  *  2. Vendor
  *    2.1 Normalize
- *    2.2 Flexbox Grid Stylus
  *  3. Base
  *    3.1 Fonts
  *    3.2 Main
@@ -22,15 +21,25 @@
 
 /*
  *  1. Config
+ *    1.1 Variables
+ *    1.2 Mixins
+ *    1.3 Functions
  */
-@require 'config/*'
+@require './settings/_variables.styl'
+@require './mixins/_bem.styl'
+@require './mixins/_transition.styl'
+@require './functions/_opacity-background.styl'
+@require './functions/_opacity-black.styl'
+@require './functions/_opacity-white.styl'
 
 /*
  *  2. Vendor
+ *    2.1 Normalize
  */
-@import "~normalize.css"
+@import '~normalize.css';
 
 /*
  *  3. Base
  */
-@require 'base/*'
+@require './base/_fonts.styl'
+@require './base/_main.styl'

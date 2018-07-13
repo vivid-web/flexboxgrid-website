@@ -1,0 +1,29 @@
+@import '../bootstrap.styl'
+
+.block
+  align-items: stretch
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  overflow: hidden
+  padding: 1rem
+  width: 100%
+
+  &:after
+    content: ''
+    display: block
+    height: 0
+    visibility: hidden
+
+  +variant('dark')
+    background-color: $opacity_white_20
+
+  +variant('dark-highlight')
+    background-color: $primary_dark
+
+  +variant('light')
+    background-color: $opacity_black_20
+
+  +variant('light-highlight')
+    background-color: $primary_light
