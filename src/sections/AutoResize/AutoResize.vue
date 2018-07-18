@@ -6,8 +6,8 @@ import {
   BlockContent as UIBlockContent,
 } from '@/components';
 
-import codeExampleHtml from './code-example.html';
-import codeExampleVue from './code-example.vue';
+import codeExampleHtml from './examples/example.html';
+import codeExampleVue from './examples/example.vue';
 
 export default {
   /**

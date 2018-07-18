@@ -26,6 +26,20 @@ export default {
   ],
 
   /**
+   * The properties that this component accepts.
+   */
+  props: {
+    /**
+     * If the link is an external link.
+     */
+    isExternal: {
+      type: Boolean,
+      required: false,
+      default: () => false,
+    },
+  },
+
+  /**
    * Renders the component.
    *
    * @param {Function} h Will create the DOM element.
@@ -34,8 +48,19 @@ export default {
    */
   /* eslint-disable-next-line no-unused-vars */
   render(h) {
+    const props = {
+      class: this.classes,
+    };
+
+    if (this.isExternal) {
+      props.attrs = {
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      };
+    }
+
     return (
-      <a class={this.classes}>
+      <a {...props}>
         {this.children}
       </a>
     );

@@ -32,9 +32,8 @@ export default {
           <UIFooterBody variant="light">
             <UILink
               href="http://vivid-websolutions.nl"
-              target="_blank"
               variant="light"
-              rel="noopener noreferrer"
+              is-external
             >
               Vivid Websolutions
             </UILink>

@@ -70,8 +70,7 @@ export default {
             <UIButton
               :variants="['primary', 'block']"
               href="https://raw.githubusercontent.com/vivid-web/flexboxgrid-stylus/master/dist/flexboxgrid.css"
-              target="_blank"
-              rel="noopener noreferrer"
+              is-external
             >
               Download Full
             </UIButton>
@@ -80,8 +79,7 @@ export default {
             <UIButton
               :variants="['primary', 'block']"
               href="https://raw.githubusercontent.com/vivid-web/flexboxgrid-stylus/master/dist/flexboxgrid.min.css"
-              target="_blank"
-              rel="noopener noreferrer"
+              is-external
             >
               Download Minified
             </UIButton>
@@ -129,8 +127,7 @@ export default {
                         <UIButton
                           variant="primary"
                           href="http://github.com/vivid-web/flexboxgrid-vue"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          is-external
                         >
                           GitHub
                         </UIButton>
@@ -180,8 +177,7 @@ export default {
                         <UIButton
                           variant="primary"
                           href="http://github.com/vivid-web/flexboxgrid-sass"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          is-external
                         >
                           GitHub
                         </UIButton>
@@ -230,8 +226,7 @@ export default {
                         <UIButton
                           variant="primary"
                           href="http://github.com/vivid-web/flexboxgrid-less"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          is-external
                         >
                           GitHub
                         </UIButton>
@@ -279,8 +274,7 @@ export default {
                         <UIButton
                           variant="primary"
                           href="http://github.com/vivid-web/flexboxgrid-stylus"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          is-external
                         >
                           GitHub
                         </UIButton>
