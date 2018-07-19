@@ -1,8 +1,10 @@
 <script>
 import * as FlexboxgridVue from '@vivid-web/flexboxgrid-vue';
-import UIFooter from '@/components/Footer/Footer.vue';
-import UIFooterBody from '@/components/Footer/FooterBody.vue';
-import UILink from '@/components/Link/Link.vue';
+import {
+  Footer as UIFooter,
+  FooterBody as UIFooterBody,
+  Link as UILink,
+} from '@/components';
 
 export default {
   /**
@@ -30,9 +32,8 @@ export default {
           <UIFooterBody variant="light">
             <UILink
               href="http://vivid-websolutions.nl"
-              target="_blank"
               variant="light"
-              rel="noopener noreferrer"
+              is-external
             >
               Vivid Websolutions
             </UILink>

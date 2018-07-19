@@ -1,0 +1,14 @@
+@import '../../bootstrap.styl'
+
+.jumbotron
+  +has('title')
+    font-size: 5rem
+    font-weight: 700
+    margin-bottom: 1rem
+    text-align: center
+
+    +variant('dark')
+      color: $primary_white
+
+    +variant('light')
+      color: $primary_black

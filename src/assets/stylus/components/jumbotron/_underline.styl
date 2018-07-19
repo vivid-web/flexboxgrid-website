@@ -1,0 +1,14 @@
+@import '../../bootstrap.styl'
+
+.jumbotron
+  +has('underline')
+    height: 2px
+    display: block
+    margin: 2.5rem auto
+    width: 200px
+
+    +variant('dark')
+      background-color: $primary_dark
+
+    +variant('light')
+      background-color: $primary_light
